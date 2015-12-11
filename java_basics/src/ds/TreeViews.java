@@ -43,6 +43,8 @@ levelorder traversal
 1 2 3 4 5 6 7
 spiral order traversal
 1 2 3 7 6 5 4
+Boundry Order
+1 2 4 5 6 7 3
 
  * 
  * 
@@ -162,7 +164,74 @@ public class TreeViews {
 
 		}
 	}
+	static Stack<TreeNode> s=new Stack<TreeNode>();
+/*
+ * 1 2 4 5 6 7 3
+ */
+	static void BoundryOrder(TreeNode t,int num){
+		if(t==null)
+			return;
+		if(num==2){
+			System.out.print(t.getNum()+" ");
+			BoundryOrder(t.left, -1);
+			BoundryOrder(t.right, 1);
+		}
+		else{
+			if(num==-1){
+				System.out.print(t.getNum()+" ");
+				BoundryOrder(t.left, num);
+				if(t.right!=null){
+					BoundryOrder(t.right, 0);
+				}
+				return;
+			}
+			else if(num==1){
+				s.push(t);
+				BoundryOrder(t.right, num);
+				if(t.left!=null){
+					BoundryOrder(t.left, 0);
+					
+				}
+				return;
+			}
+			else if(num==0){
+				if(t.left==null && t.right==null){
+					System.out.print(t.getNum()+" ");
+					return;
+				}
+				else{
+					BoundryOrder(t.left, num);
+					BoundryOrder(t.right, num);
+					return;
+				}
+			}
+			else{
+				
+			}
+		}
+		
+		while(s.size()>0){
+			System.out.print(s.pop().getNum()+" ");
+		}
+	}
 
+	
+	static void DiagonalOrder(TreeNode t){
+		Queue<TreeNode> s=new LinkedList<TreeNode>();
+		s.add(t);
+		while(s.size()>0){
+			TreeNode temp=s.remove();
+			while(temp!=null){
+				if(temp.left!=null){
+					s.add(temp.left);
+				}
+				System.out.print(temp.getNum()+" ");
+				temp=temp.right;
+			}
+		}
+		
+	}
+	
 	public static void main(String args[]){
 		TreeNode tree=new TreeNode();
 		TreeNode treel,treer;
@@ -188,6 +257,14 @@ public class TreeViews {
 		System.out.println("\nNative Inorder Traversal");
 		NativePreorder(tree);
 		System.out.println("\nMaximum Sum From Root to Leaf");
+
 		System.out.println(MaxSumFromRootToLeaf.MaxSum(tree));
+		System.out.println("Boundry Traversal");
+		BoundryOrder(tree, 2);
+		System.out.println("\nDiagonal Traversal");
+		DiagonalOrder(tree);
+		
+		System.out.println("\nVertical Order");
+
 	}
 }

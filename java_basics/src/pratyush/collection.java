@@ -50,7 +50,7 @@ public class collection {
 
 
 
-
+System.out.println("TreeSet");
 		TreeSet<String> al1=new TreeSet<String>();  
 		al1.add("Ravi");  
 		al1.add("Vijay");  
@@ -62,6 +62,9 @@ public class collection {
 			System.out.println(itr1.next());  
 		}  
 
+		
+		System.out.println("\n PrQ");
+		
 
 	}
 }

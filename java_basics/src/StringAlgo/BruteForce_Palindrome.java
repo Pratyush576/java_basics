@@ -16,7 +16,7 @@ public class BruteForce_Palindrome {
 			for(int j=0;j<str.length()-i;j++){
 				int k=j;
 				int l=j+i-1;
-				System.out.println(k+" "+l+" "+i);
+				//System.out.println(k+" "+l+" "+i);
 				//System.out.println(str.substring(k,l));
 				while(k<l){
 					//System.out.println(str.substring(k,l));
@@ -48,11 +48,11 @@ public class BruteForce_Palindrome {
 		/*
 		 * BruteForce 
 		 */
-		//System.out.println("Largest Palindrome: "+BruteForce(str));
+		System.out.println("Largest Palindrome: "+BruteForce(str));
 		/*
 		 * Dynamic Prog.
 		 */
-		//System.out.println("Largest Palindrome:"+DP_palindrome.DPPalindrome(str));
+		System.out.println("Largest Palindrome:"+DP_palindrome.DPPalindrome(str));
 		/*
 		 * Manacher's Algo
 		 */
