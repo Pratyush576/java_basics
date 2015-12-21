@@ -4,6 +4,12 @@ package pratyush;
  * Partition a set into two subsets such that the difference of subset sums is minimum
  */
 public class Min_Subsets_Difference {
+	/*
+	 * A--> Array containing all numbers
+	 * l--> Upper Bound 
+	 * s1-> sum of first subset
+	 * s2-> sum of second subset
+	 */
 	static int MinDiff(int[] A,int l,int s1	, int s2){
 		if(l==0){
 			//System.out.println("");
@@ -15,17 +21,17 @@ public class Min_Subsets_Difference {
 			
 		}
 		else{
-			int flag1=MinDiff(A, l-1, s1+A[l-1], s2);
+			int flag1=MinDiff(A, l-1, s1+A[l], s2);
 			int flag2=MinDiff(A, l-1, s1, s2);
 			//System.out.println(flag1+" "+flag2);
 			if(flag1<flag2){
-				System.out.println(flag1);
+				//System.out.println(flag1);
 				return flag1;
-				
 			}else{
-				System.out.println(flag2);
+				//System.out.println(flag2);
 				return flag2;
 			}
+			
 		}
 		
 	}

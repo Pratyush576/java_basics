@@ -6,7 +6,6 @@ public class LCS {
 		num++;
 		String str="";
 		if(l>=ch1.length||r>=ch2.length){
-
 			return LCS_str; 
 		}
 		if(ch1[l]==ch2[r]){
@@ -25,8 +24,8 @@ public class LCS {
 			}
 		}
 		return str;
-
 	}
+	
 	public static void main(String args[]){
 		String str1="ABCDGHP";
 		String str2="AEDFHRGHP";

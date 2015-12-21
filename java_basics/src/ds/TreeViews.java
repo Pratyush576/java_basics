@@ -128,7 +128,6 @@ public class TreeViews {
 
 			}
 		}
-
 	}
 
 
@@ -149,7 +148,6 @@ public class TreeViews {
 					s2.push(current.left);
 				}
 			}
-
 			while(s2.size()>0){
 				current=s2.pop();
 				System.out.print(current.getNum()+" ");
@@ -159,15 +157,13 @@ public class TreeViews {
 				if(current.right!=null){
 					s1.push(current.right);
 				}
-
 			}
-
 		}
 	}
 	static Stack<TreeNode> s=new Stack<TreeNode>();
-/*
- * 1 2 4 5 6 7 3
- */
+	/*
+	 * 1 2 4 5 6 7 3
+	 */
 	static void BoundryOrder(TreeNode t,int num){
 		if(t==null)
 			return;
@@ -190,7 +186,7 @@ public class TreeViews {
 				BoundryOrder(t.right, num);
 				if(t.left!=null){
 					BoundryOrder(t.left, 0);
-					
+
 				}
 				return;
 			}
@@ -206,16 +202,15 @@ public class TreeViews {
 				}
 			}
 			else{
-				
+
 			}
 		}
-		
 		while(s.size()>0){
 			System.out.print(s.pop().getNum()+" ");
 		}
 	}
 
-	
+
 	static void DiagonalOrder(TreeNode t){
 		Queue<TreeNode> s=new LinkedList<TreeNode>();
 		s.add(t);
@@ -229,9 +224,55 @@ public class TreeViews {
 				temp=temp.right;
 			}
 		}
-		
 	}
-	
+
+
+	static void Tre2LL(TreeNode T){
+		if(T==null){
+			return;
+		}
+		TreeNode root=T;
+		Queue<TreeNode> q=new LinkedList<TreeNode>();
+		q.add(T);
+		TreeNode Prev=null;
+		while(q.size()>0){
+			TreeNode T1=q.remove();
+			if(T1.left!=null)
+				q.add(T1.left);
+			if(T1.right!=null)
+				q.add(T1.right);
+			T1.left=Prev;
+			T1.right=null;
+			if(Prev!=null)
+				Prev.right=T1;
+			
+			
+			/*if(T1.left!=null&& T1.right!=null)
+				System.out.print(T1.getNum()+"["+T1.left.getNum()+","+T1.right.getNum()+"] ");
+			else if(T1.left!=null)
+				System.out.print(T1.getNum()+"["+T1.left.getNum()+",null] ");
+			else if(T1.right!=null)
+				System.out.print(T1.getNum()+"[null,"+T1.left.getNum()+"] ");
+			else
+				System.out.print(T1.getNum()+"[null,null] ");*/
+			Prev=T1;
+		}
+		TreeNode T1=root;
+		//System.out.println(T1.getNum());
+		//System.out.println(T1.left);
+		while(T1!=null){
+			if(T1.left!=null&& T1.right!=null)
+				System.out.print(T1.getNum()+"["+T1.left.getNum()+","+T1.right.getNum()+"] ");
+			else if(T1.left!=null)
+				System.out.print(T1.getNum()+"["+T1.left.getNum()+",null] ");
+			else if(T1.right!=null)
+				System.out.print(T1.getNum()+"[null,"+T1.right.getNum()+"] ");
+			else
+				System.out.print(T1.getNum()+"[null,null] ");
+			T1=T1.right;
+		}
+	}
+
 	public static void main(String args[]){
 		TreeNode tree=new TreeNode();
 		TreeNode treel,treer;
@@ -263,8 +304,9 @@ public class TreeViews {
 		BoundryOrder(tree, 2);
 		System.out.println("\nDiagonal Traversal");
 		DiagonalOrder(tree);
-		
-		System.out.println("\nVertical Order");
 
+		System.out.println("\nTree to LL");
+		Tre2LL(tree);
+		//System.out.println("\nVertical Order");
 	}
 }

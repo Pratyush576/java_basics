@@ -18,7 +18,7 @@ public class seldemo {
 		driver.findElement(By.id("email")).sendKeys("pratyushcse07@gmail.com");
 		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys("pratyush576");
 		//*[@id="u_0_v"]
-		driver.findElement(By.cssSelector("#persist_box")).click();;
+		driver.findElement(By.cssSelector("#persist_box")).click();
 		//driver.findElement(By.xpath("//*[@id=\"persist_box\"]")).click();;
 		//driver.findElement(By.partialLinkText("Log In")).click();;//("//input[@value='Log In']");
 		//driver.findElement(By.className("uiButton uiButtonConfirm")).click();;//.xpath("//*[@id=\"u_0_v\"]")).submit();

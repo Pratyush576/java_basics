@@ -68,6 +68,5 @@ public class ll_loop {
 			temp=temp.getnext();
 		}
 		*/
-		
 	}
 }
