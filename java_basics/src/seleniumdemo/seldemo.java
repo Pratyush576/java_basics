@@ -15,8 +15,8 @@ public class seldemo {
 		//driver.get("http://stageweb.vizury.com");
 		//driver.findElement(By.xpath("//*[@id=\"menu-item-5\"]/a")).click();;
 		driver.get("http://www.facebook.com");
-		driver.findElement(By.id("email")).sendKeys("pratyushcse07@gmail.com");
-		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys("pratyush576");
+		driver.findElement(By.id("email")).sendKeys("");
+		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys("");
 		//*[@id="u_0_v"]
 		driver.findElement(By.cssSelector("#persist_box")).click();
 		//driver.findElement(By.xpath("//*[@id=\"persist_box\"]")).click();;
