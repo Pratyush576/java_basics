@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TEST" thread-count="100" parallel="instances">
+	<test name="TEST">
+		<parameter name="locales" value="US" />
+		<parameter name="stage" value="beta" />
+		<parameter name="browsers" value="firefox" />
+		<classes>
+			<class name="testng.basics.Test1"></class>
+			<class name="testng.basics.Test2"></class>
+		</classes>
+	</test>
+</suite>
+
