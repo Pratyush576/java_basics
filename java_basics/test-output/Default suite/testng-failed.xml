@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="pratyush.testNGdemo">
+      <class name="seleniumdemo.ChromeEmulator">
         <methods>
-          <include name="afterclass"/>
-          <include name="beforetest"/>
-          <include name="start"/>
-          <include name="End"/>
-          <include name="beforeclass"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="testAdd"/>
+          <include name="listOfDevices"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- pratyush.testNGdemo -->
+      </class> <!-- seleniumdemo.ChromeEmulator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
