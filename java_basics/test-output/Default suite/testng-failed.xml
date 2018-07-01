@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="seleniumdemo.ChromeEmulator">
+      <class name="testng.basics.mockingTest">
         <methods>
-          <include name="listOfDevices"/>
-          <include name="setUp"/>
+          <include name="splitsAddressesByComma"/>
+          <include name="injectDoubles"/>
         </methods>
-      </class> <!-- seleniumdemo.ChromeEmulator -->
+      </class> <!-- testng.basics.mockingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

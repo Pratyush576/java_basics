@@ -29,11 +29,11 @@ public class UniqPalindromeCount {
 				}
 			}
 		}
-		System.out.println(pal.size());
+		System.out.println("Total Number of palindrome: "+pal.size());
 		return pal.size();
 	}
 	public static void main(String args[]){
-		System.out.println(Count("ababcdc"));
+		System.out.println(Count("ababcdcjsdhjksdh"));
 	}
 
 }

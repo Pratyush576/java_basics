@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="api/jsoup-1.6.0.jar"/>
 	<classpathentry kind="lib" path="api/selenium-server-standalone-2.53.0.jar"/>
 	<classpathentry kind="lib" path="api/testng-6.8.7.jar"/>
+	<classpathentry kind="lib" path="/Users/pratyusk/Downloads/mockito-all-1.10.19.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
