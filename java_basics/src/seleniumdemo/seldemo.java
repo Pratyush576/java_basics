@@ -11,22 +11,21 @@ public class seldemo {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Driver/chromedriver");
 		WebDriver driver=new ChromeDriver();
 		//WebDriver driver=new FirefoxDriver();
-		
-		//driver.get("http://stageweb.vizury.com");
-		//driver.findElement(By.xpath("//*[@id=\"menu-item-5\"]/a")).click();;
 		driver.get("http://www.facebook.com");
-		driver.findElement(By.id("email")).sendKeys("");
-		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys("");
-		//*[@id="u_0_v"]
-		driver.findElement(By.cssSelector("#persist_box")).click();
-		//driver.findElement(By.xpath("//*[@id=\"persist_box\"]")).click();;
-		//driver.findElement(By.partialLinkText("Log In")).click();;//("//input[@value='Log In']");
-		//driver.findElement(By.className("uiButton uiButtonConfirm")).click();;//.xpath("//*[@id=\"u_0_v\"]")).submit();
-		driver.findElement(By.id("loginbutton")).click();;
-		//driver.wait(5000);
-		//new Thread().sleep(10000);
+		//driver.get("http://www.facebook.com");
+		driver.findElement(By.id("email")).sendKeys(pass.uName);
+		driver.findElement(By.xpath("//*[@id=\"pass\"]")).sendKeys(pass.password);
+		driver.findElement(By.id("loginbutton")).click();
+		driver.findElement(By.className("_3ixn")).click();;
+		
+		
+		Thread.sleep(3000);
+		driver.findElement(By.className("_5afe")).click();;
+		//linkWrap noCount
+		//driver.findElement(By.className("_5afe")).click();;
+		//driver.findElement(By.linkText("Pratyush Kumar")).click();
+		
 		driver.close();
-		//System.out.println(System.getProperty("user.dir"));
 	}
 
 }
