@@ -1,5 +1,8 @@
 package lombokusecase;
 
+import lombok.extern.java.Log;
+
+@Log
 public class LobbokTest {
 	public static void main(String[] args) {
 		UserInfo ui = new UserInfo(10);
@@ -7,7 +10,7 @@ public class LobbokTest {
 		ui.setLastName("Kumar");
 		ui.setId(123456L);
 		ui.setAbout("this is test class");
-		System.out.println(ui.getFirstName()+" "+ui.getLastName()+" "+ui.getId()+" "+ui.getAbout());
-		System.out.println(ui.toString());
+		log.info(ui.getFirstName()+" "+ui.getLastName()+" "+ui.getId()+" "+ui.getAbout());
+		log.info(ui.toString());
 	}
 }
